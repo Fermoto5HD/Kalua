@@ -5,11 +5,11 @@ var actualPage = undefined;
 
 $(document).ready(function() {
 	if(window.location.hash) {
-			var page = window.location.hash; 
-			section(page); 
+		var page = window.location.hash; 
+		section(page); 
 	} else {
-			section('#home');
-			actualPage = '#home'; 
+		section('#home');
+		actualPage = '#home'; 
 	}; 
 
 	$(document).on("click", "nav a", function(){
@@ -60,12 +60,19 @@ $(document).ready(function() {
 		// 	}
 		// }); 
 	}
-
 }); 
 
 var section = function(page){
 	var page = page.substring(1); 
+	console.log(page); 
 	if (actualPage !== page) {
+		if (page === "home") {
+			console.log('home'); 
+			$('footer').addClass('home'); 
+		} else {
+			console.log('otra pagina'); 
+			$('footer').removeClass('home'); 
+		}; 
 		var loadPage = $.get( 'section/'+page+'.html', function(daPage) {
 			$('main#content').html(daPage);
 		})
