@@ -1,0 +1,70 @@
+/* Header */
+	/* Navbar */
+	.navbar-inverse {background-color: rgba(0, 0, 0, 0.7); border-bottom: rgba(0, 0, 0, 0.5);}
+	.navbar-inverse.onTop {background-image: none;}
+	/* Brand */
+	a#brand{
+		padding: 0;
+		margin: 5px;
+		width: 200px;
+		height: 45px;
+		background-image: url('../img/brand-white.png'); 
+		background-size: cover; 
+		background-repeat: no-repeat; 
+		background-position: center; 
+		transition: 0.25s;
+	}
+	a#brand.onTop{
+		width: 305px;
+		height: 75px;
+	}
+
+	/* Menu items */
+	nav li a{
+		font-size: 18px; 
+		transition: 0.25s;
+	}
+	nav ul.navbar-right li, nav ul.navbar-right li a{transition: 0.25;}
+	nav ul.navbar-right.onTop li{padding-top: 24px;}
+	nav li a.active{color: #FFF !important;}
+
+	@media (min-width: 768px){
+		.navbar-inverse.onTop {background-color: transparent; background-image: linear-gradient(to bottom, #000 0%, transparent 100%);}
+	}
+
+/* Pages */
+	/* Jumbotron cover */
+	.jumbotron{
+		background-size: cover; 
+		background-repeat: no-repeat; 
+		background-position: center;
+		padding-top: 0; 
+		padding-bottom: 0;
+	}
+	.jumbotron .jumbotron-inner{background-color: rgba(0, 0, 0, 0.5); color: #FFF; margin: 0; padding-top: 100px; padding-bottom: 30px;}
+	.jumbotron#slider-home{background-image: url('../img/jumbotron/fotos.jpg'); }
+	.jumbotron#a-pousada{background-image: url('../img/jumbotron/a-pousada.jpg'); }
+	.jumbotron#fotos{background-image: url('../img/jumbotron/fotos.jpg'); }
+	.jumbotron#ferrugem{background-image: url('../img/jumbotron/ferrugem.jpg'); }
+	.jumbotron#contato{background-image: url('../img/jumbotron/contato.jpg'); }
+
+/* Home page */
+.welcome-text{
+	position: absolute; 
+	width: 100%; 
+	top: 0px; z-index: 6;
+	background-image: linear-gradient(to bottom, #000 0%, transparent 100%);
+	text-align: center;
+} 
+	.welcome-text .container{
+		padding-top: 75px;
+		padding-bottom: 100px; 
+	}
+
+	@media (min-width: 768px){	
+	.welcome-text{position: fixed;}
+		.welcome-text .container{
+			padding-top: 100px;
+			padding-bottom: 100px; 
+		}
+	}
