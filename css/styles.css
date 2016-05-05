@@ -1,3 +1,6 @@
+/* Font */
+	*{font-family: "Open Sans", "Tahoma", "Verdana", "Arial", "Sans-serif";}
+
 /* Background site */
 	body{
 		background-color: rgb(20, 20, 20); 
@@ -41,6 +44,43 @@
 	}
 
 /* Pages */
+	/* Slider */
+		main.home{height: 100%;}
+		.carousel-fade .carousel-inner .item {
+			-webkit-transition-property: opacity;
+			transition-property: opacity;
+		}
+		.carousel-fade .carousel-inner .item,
+		.carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right {
+			opacity: 0;
+		}
+		.carousel-fade .carousel-inner .active,
+		.carousel-fade .carousel-inner .next.left, .carousel-fade .carousel-inner .prev.right {
+			opacity: 1;
+		}
+		.carousel-fade .carousel-inner .next, .carousel-fade .carousel-inner .prev,
+		.carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right {
+			left: 0;
+			-webkit-transform: translate3d(0, 0, 0);
+							transform: translate3d(0, 0, 0);
+		}
+		.carousel-fade .carousel-control {
+			z-index: 2;
+		}
+		html, body, .carousel, .carousel-inner, .carousel-inner .item {
+			height: 100%;
+		}
+		.carousel-inner .item{background-size: cover; background-position: center; background-repeat: no-repeat;}
+		.item:nth-child(1) {
+			background-image: url('../img/slide/1.jpg'); 
+		}
+		.item:nth-child(2) {
+			background-image: url('../img/slide/2.jpg'); 
+		}
+		.item:nth-child(3) {
+			background-image: url('../img/slide/3.jpg'); 
+		}
+
 	/* Jumbotron cover */
 	.jumbotron{
 		background-size: cover; 
@@ -60,7 +100,7 @@
 
 /* Home page */
 .welcome-text{
-	position: absolute; 
+	/*position: absolute; */
 	width: 100%; 
 	top: 0px; z-index: 6;
 	background-image: linear-gradient(to bottom, #000 0%, transparent 100%);

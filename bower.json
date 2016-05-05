@@ -1,0 +1,34 @@
+{
+  "name": "kalua",
+  "homepage": "https://github.com/Fermoto5HD/Kalua",
+  "authors": [
+    "Fernando Osorio <Fermoto5HD@outlook.com>"
+  ],
+  "description": "Sitio web para la posada Kalua de Brasil.",
+  "main": "",
+  "license": "CC-BY-4.0",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }, 
+  "overrides": {
+      "bootstrap": {
+        "main":[
+          "dist/js/bootstrap.min.js",
+          "dist/css/bootstrap.min.css"
+        ]
+      }, 
+      "jquery": {
+        "main":[
+          "dist/jquery.min.js"
+        ]
+      }
+    }
+}

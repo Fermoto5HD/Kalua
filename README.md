@@ -4,6 +4,12 @@ El sitio se creó totalmente desde cero utilizando Bootstrap v3, Modernizr, Mome
 
 ## Changelog 
 
+### v1.1 
+* Agregado el soporte de dependencias vía Bower. 
+* Agregado Gulp para hacer dist de los componentes. 
+* Removidos algunos archivos y optimización del home. 
+* Cambios menores. 
+
 ### v1.0.1 
 * Agregado README.md 
 * Unificación de archivos. 

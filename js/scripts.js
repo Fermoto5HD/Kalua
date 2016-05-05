@@ -37,47 +37,28 @@ $(document).ready(function() {
 				$('ul.navbar-right').removeClass('onTop'); 
 			}
 		});
-	} else { 
-		// $(window).scroll(function (event) {
-		// 	onTopMobile(); 
-		// });
-
-		// var onTopMobile = function(){
-		// 	var scroll = $(document).scrollTop(); 
-		// 	if (scroll <= 150){
-		// 		$('.navbar-inverse').addClass('onTop');
-		// 	} else {
-		// 		$('.navbar-inverse').removeClass('onTop');
-		// 	}
-		// }; 
-
-		// $(document).on("click", ".navbar-toggle", function(){
-		// 	var toggleMenu = $('.navbar-toggle').attr('expanded'); 
-		// 	if (toggleMenu) {
-		// 		$('.navbar-inverse').removeClass('onTop');
-		// 	} else {
-		// 		onTopMobile(); 
-		// 	}
-		// }); 
-	}
+	}; 
 }); 
 
 var section = function(page){
 	var page = page.substring(1); 
 	console.log(page); 
 	if (actualPage !== page) {
-		if (page === "home") {
-			console.log('home'); 
-			$('footer').addClass('home'); 
-		} else {
-			console.log('otra pagina'); 
-			$('footer').removeClass('home'); 
-		}; 
 		var loadPage = $.get( 'section/'+page+'.html', function(daPage) {
 			$('main#content').html(daPage);
+		}).success(function(){
+			if (page === "home") {
+				console.log('home'); 
+				$('main').addClass('home');
+				$('footer').addClass('home'); 
+			} else {
+				console.log('otra pagina'); 
+				$('main').removeClass('home'); 
+				$('footer').removeClass('home'); 
+			}; 
 		})
-			.fail(function() { 
-				section('#home'); 
+		.fail(function() { 
+			section('#home'); 
 		});
 		window.location.hash = page; 
 		actualPage = page; 
